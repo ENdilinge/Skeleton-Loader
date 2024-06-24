@@ -1,0 +1,143 @@
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .loader-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+  }
+
+  .loader-header,
+  .loader-sidebar,
+  .loader-content,
+  .loader-footer {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .loader-header,
+  .loader-footer {
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .loader-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .loader-sidebar {
+    flex: 1;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  .loader-content {
+    flex: 3;
+  }
+
+  .loader-footer {
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .loader-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .loader-line {
+    flex: 1;
+    height: 15px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-right: 10px;
+    animation: loading 1.5s ease-in-out infinite;
+  }
+  
+  .loader-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-right: 15px;
+    animation: loading 1.5s ease-in-out infinite alternate;
+  }
+  
+  /* Keyframes for loading animation */
+  @keyframes loading {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Mobile phones (up to 767px) */
+  @media (max-width: 767px) {
+    .loader-container {
+      flex-direction: column;
+    }
+
+    .loader-sidebar {
+      border-right: none;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .loader-line {
+      height: 10px;
+    }
+    
+    .loader-circle {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  /* Tablets (768px to 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .loader-line {
+      height: 12px;
+    }
+    
+    .loader-circle {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  /* Desktops (1024px to 1919px) */
+  @media (min-width: 1024px) and (max-width: 1919px) {
+    .loader-line {
+      height: 18px;
+    }
+    
+    .loader-circle {
+      width: 45px;
+      height: 45px;
+    }
+  }
+  
+  /* Televisions (1920px and above) */
+  @media (min-width: 1920px) {
+    .loader-line {
+      height: 20px;
+    }
+    
+    .loader-circle {
+      width: 50px;
+      height: 50px;
+    }
+  }
